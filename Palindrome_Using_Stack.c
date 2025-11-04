@@ -7,8 +7,22 @@
 char stack[MAX];
 int top = -1;
 
-void push(char c) { stack[++top] = c; }
-char pop() { return stack[top--]; }
+void push(char c) {
+    if (top==MAX-1){
+        printf("Stack Overflow!!");
+    }
+    else{
+        stack[++top] = c; 
+    }
+}
+char pop() {
+    if (top==-1){
+        printf("Stack Underflow!!");
+    }
+    else{
+        return stack[top--]; 
+    }
+}
 
 int isPalindrome(char str[]) {
     char filtered[MAX];
@@ -45,3 +59,4 @@ int main() {
 
     return 0;
 }
+
