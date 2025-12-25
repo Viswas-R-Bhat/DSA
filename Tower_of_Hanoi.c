@@ -14,6 +14,7 @@ void towers(int n, char frompeg, char auxpeg, char topeg)
     else{
         towers(n-1,frompeg,auxpeg,topeg);
         printf("Move disk %d from %c to %c\n",n,frompeg,topeg);
-        towers(n-1,topeg,auxpeg,frompeg);
+        towers(n-1,auxpeg,topeg,frompeg);
     }
+
 }
