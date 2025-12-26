@@ -25,7 +25,7 @@ int dequeue()
     else{
         printf("The deleted element is %d\n",Queue[f]);
         f=(f+1)%MAX;
-        if(f > r){
+        if(f == r){
             f=-1;
             r=-1;
         }
@@ -77,5 +77,6 @@ int main() {
     } while(choice != 4);
     return 0;
 }
+
 
 
